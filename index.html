@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>law4arabs</title>
+<!-- Font Awesome Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/droid-arabic-kufi" type="text/css"/>
+<style>
+
+/* Start Variables */
+:root {
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s;
+  }
+  /* End Variables */
+  
+  body {font-family: DroidArabicKufiRegular;
+margin: 0;
+font-size: 20px;
+direction: rtl;
+text-align: center;
+height: auto;
+box-sizing: border-box;
+}
+ 
+h2{
+  color: #cf6f68;
+  
+}
+
+
+p{ text-align:center;color: #3e5857; font-size: 25px; padding: 10px 25px;}
+
+
+ 
+/* Start about */
+.about{position: relative;text-align: right;}
+.about h2 {font-size: 45px;color:#cf6f68;text-align: center
+; 
+  padding-right: 30px;
+  box-shadow: 19px 7px 15px rgb(0 0 0 / 7%);
+}
+.about .container{
+display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px,1fr) );
+  gap: 30px;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about .dadimage img{
+  width: 90%;
+  padding: 40px;
+  text-align: center;
+}
+
+
+/* End about */
+
+ .privacy{
+  padding: 10px 35px;
+  background: url("https://www.o2-mediagroup.com/wp-content/uploads/2018/08/Privacy.jpg");
+  background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 10px;
+    opacity: .7;
+}
+
+ hr{
+  border: 2px solid;
+  width: 10%;
+  color: #cf6f68;
+position: relative;
+background-color: #cf6f68;
+left:38%;
+top: 20px;
+}
+
+button{
+	display: block;
+	margin: auto;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+  transition: transform 0.3s, 0.5s max-width ease;
+	background-color: #00afa9;
+
+	max-width: 90%;
+  width: 60%;
+	border-radius: 0px 0px 50px 50px ;
+  font-size: 30px;
+}
+button:hover{
+  color: #000;
+	max-width: 100%;
+  transform: translatex(-15px);
+
+}
+
+/* Start Contact */
+.contact {
+  text-align: center;
+  padding-top: 20px;
+  background-color:#00afa9;
+}
+
+.contact .info .label {
+  font-size: 35px;
+  font-weight: 800;
+  color:white;
+  margin-bottom: 15px;
+}
+.contact .info .link {
+  display: block;
+  font-size: 35px;
+  font-weight: 800;
+  color:#6af7f4;
+  text-decoration: none;
+}
+.contact .info .social {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+ color: #777;
+}
+.contact .info .social i {
+  margin-left: 10px;
+  color: var(--secondary-color);
+}
+
+/* End Contact */
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color:#cf6f68;
+  color: white;
+  padding: 12px 38px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  top: -25px;
+}
+
+.container {
+  border-radius: 30px;
+  padding: 20px;
+}
+
+/*articles*/
+.articles{
+  padding: 40px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+}
+.articles .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr) );
+  gap: 30px;
+}
+
+.articles .box {
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  background-color: #f6f6f6;
+  border-radius: 7px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  justify-content: center}
+
+.articles .box:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+  border: 3px solid #00afa9;
+}
+.container .box .content{padding: 20px;}
+.container .box .content h3 {margin: 0}
+.container .box .content p{margin: 10px 0 0;line-height: 1.5;color: #777;}
+.container .box .info{
+  padding: 20px;
+  border-top: 1px solid #00afa9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.articles .box:hover .info i{color:#cf6f68; animation: moving-arrow 0.6s linear infinite;}
+
+/*animation*/
+@keyframes left-move{
+  50%{
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100%{
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+@keyframes right-move{
+  50%{
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100%{
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes moving-arrow {
+  100%{
+    transform:translatex(10px);
+  }
+  
+}
+
+/*end of animation*/
+
+.main-title{
+  margin: 0 auto 80px;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 30px;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+.main-title::before,
+.main-title::after{
+content: "";
+width: 12px;
+height: 12px;
+background-color: #00afa9;
+position: absolute;
+border-radius: 50%;
+top: 50%;
+transform: translateY(-50%);
+}
+.main-title::before{left: -30px;}
+.main-title::after{right: -30px;}
+.main-title:hover::before{z-index: -1;animation: left-move 0.5s linear forwards ;}
+.main-title:hover::after{z-index: -1;animation: right-move 0.5s linear forwards ;}
+.main-title:hover{
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.5s;
+}
+
+form {width: 50%;position: relative;right: 25%;}
+.footer{
+    color: black;
+    background-color:#2e7e7c;
+    text-align: center;
+    position: relative;
+}
+#button {
+  display: inline-block;
+  background-color:#00afa9;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius:50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color:#cf6f68;
+
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#box1 , #box2 , #box3 {display:none}
+#readMore {display: none;}
+.myhead{
+  text-align: right;margin-right: 68px;
+right: 5%;
+}
+
+/*mobile menu*/
+
+/* The side navigation menu */
+.sidenav {
+  height:100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: white; 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 40px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  background-color: gray;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+/*media queries*/
+
+@media (min-width:600px){
+  .mobilemenu{
+  position: relative;
+    right: 43px;
+    top: 12px;
+    font-size: 43px;
+
+}
+
+}
+
+@media (max-width: 767px) {
+.contact .info .label,
+.contact .info .link {
+  font-size: 20px;
+  padding: 14px;
+}
+
+
+.container2 .special-heading {
+    font-size: 45px;
+  }
+  .container2 .special-heading + p {
+    padding: 15px;
+    margin-top: -70px;  }
+    .head .navbar{
+    display: none;
+  }
+
+}
+  
+@media only screen and (max-width: 600px) {
+
+  .mobilemenu{
+    position: relative;
+    right: 12%;
+    top: 27px;
+    font-size: 35px;
+}
+.land-text img{
+width: 65px;
+}
+
+  
+.main-title{
+  font-size: 27px;
+  padding: 0;
+
+}
+.myhead{
+  text-align: center;
+  margin-right: 0;
+  right: 0;
+}
+  hr{
+    left: 0;
+  }
+
+button{
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+.articles{
+  padding: 0;
+}
+  
+  body{
+    margin: 0;
+  }
+  p{
+    font-size: 25px;
+    padding: 30px;
+  }
+
+    #navbar {
+display: none;
+}
+.privacy {
+text-align: right;
+   }
+
+   .land-text h2{
+  font-size: 22px;
+  padding-top: 15px;
+}
+
+   form{
+     text-align: center;
+     width: 100%;
+     right: 0;
+    }
+ form label{
+   text-align: right;
+ }
+
+  .about .dadimage img{
+    padding: 20px;
+    margin: 0;
+ }
+ .footer{
+   font-size: 15px;
+ }
+ .about .container{
+    grid-template-columns: repeat(auto-fill, minmax(180px,1fr) );
+ }
+ .mobilemenu {display: inline-block;}
+
+}
+
+@media only screen and (width:768px) {
+  .myhead{
+    margin-right: 41px;
+  }
+#navbar{display: none;}
+.mobilemenu{
+  position: relative;
+    right: 29%;
+    top:35px;
+    font-size: 50px;
+}
+
+}
+@media only screen and (min-width: 1000px) {
+  
+.mobilemenu{
+  display: none;
+}
+
+}
+/*special heading*/
+@media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1300px)
+  and (orientation:landscape) 
+{
+
+  .container2 .special-heading {
+    color: whitesmoke;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -4px;
+    margin: 0;
+  }
+
+  .text{
+  border: 3px solid darkgrey;
+    height: 70%;
+    position: relative;
+    left: 33%;
+    background: white;
+    top: 115px;
+    box-shadow: 50px 25px 70px rgb(0 0 0 / 70%);
+}
+}
+
+
+.my {
+  display: flex;
+}
+
+
+/*header*/
+
+.header{
+    background-image: url('https://cdn.sotor.com/thumbs/fit630x300/52468/1598426378/%D9%85%D8%A7%D8%B0%D8%A7_%D9%8A%D8%B9%D9%86%D9%8A_%D8%AA%D8%B7%D8%A8%D9%8A%D9%82_%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%A7%D9%84%D8%AF%D9%81%D8%A7%D8%B9_%D9%88%D9%81%D9%82%D9%8B%D8%A7_%D9%84%D9%84%D8%AF%D8%B3%D8%AA%D9%88%D8%B1_%D8%A7%D9%84%D8%A3%D8%B1%D8%AF%D9%86%D9%8A.jpg');
+    text-align: center;
+    background-size: cover;
+    position: relative;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 350px;
+}
+  .land-text h2{font-size:20px;color:black;}
+  .land-text p{ font-size:30px; color: black;}
+ .land-text{display: flex;max-width: 100%; align-items: center;white-space: nowrap}
+ .land-text img{width: 110px; padding: 10px; height:70px }
+
+ #navbar {
+  background-color: white;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  transition: top 0.3s; 
+  z-index: 20;
+  display: flex;
+column-gap: 55px;
+height: 100px;
+}
+
+/* Style the navbar links */
+#navbar a {
+    display: flex;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;   }
+
+#navbar a:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 8px;
+  right: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.30s ease-out;
+}
+
+#navbar a:hover:before {transform: scaleX(1);
+transform-origin: bottom right;
+}  
+
+
+ /*mobile menu*/
+
+/* The side navigation menu */
+.sidenav {
+  height:100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: white; 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 40px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+ .closebtn {width: 100px; height:50px; font-size:100px;color: red;}
+/* The navigation menu links */
+.sidenav a {padding: 8px ; text-decoration: none; font-size: 30px; color: black; display: block;}
+.sidenav a:hover {  background-color: #cc6761;transition: 0.6s;}
+
+@media only screen and (max-width: 1200px){
+  #navbar a{font-size: 17px; white-space: nowrap;}
+  .mobilemenu{display: none;}
+  #navbar{column-gap: 18px; position:absolute ;}
+}
+
+@media only screen and (width:768px) {
+#navbar .mobilemenu a {display: block;}
+}
+
+@media only screen and (min-width: 1000px) {
+.mobilemenu{display: none;}
+}
+
+/* 600px and up */
+@media (min-width:600px){
+  .mobilemenu{position: relative;right: 29%;  top: 12px;font-size: 43px}
+}
+
+@media only screen and (max-width: 600px) {
+
+  #navbar{direction: ltr;position: absolute;}
+.header{height:310px}
+
+.mobilemenu{
+  position: relative;
+  left:15%;
+  top: 15px;
+  font-size: 35px;
+  display: inline-block;}
+  #navbar .mobilemenu a {display: block;}
+.land-text{ padding: 0;}
+.land-text h2{display: none;}
+  #navbar a{display: none;}
+#navbar{z-index: 20;}
+}
+
+
+</style>
+
+</head>
+<body>
+
+  <div id="navbar">
+    <div class="land-text">
+        <img src="https://pbs.twimg.com/profile_images/2626041008/image.jpg">
+        <h2>قانون العرب </h2>
+    </div>
+        
+    <div class="mobilemenu">
+     <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a data-value="test" href="#">من نحن</a>
+            <a data-value="new" href="#"> المقالات الشائعة</a>
+            <a data-value="pri" href="#">سياسة الخصوصية</a>
+            <a data-value="cont" href="#">تواصل معنا</a>
+      </div>
+          
+      <span onclick="openNav()">☰</span>
+      </div>
+      <a data-value="test" href="#">من نحن</a>
+      <a data-value="new" href="#"> المقالات الشائعة</a>
+      <a data-value="pri" href="#">سياسة الخصوصية</a>
+      <a data-value="cont" href="#">تواصل معنا</a>
+      </div>
+    <div class="header">
+             
+  </div>
+
+
+<!--about-->
+
+<h2 class="myhead" data-value="test" href="javascript:void(0)">من نحن  About Us </h2>
+
+<div id="test" class="about">
+<div class="container">
+    <div class="dadimage">
+      <img src="data:image/jpeg;base64,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">
+    </div>
+
+  <div class="text">
+
+                  <p>
+                    اعرفكم بنفسي اعزائي القراء الكرام
+                    أنا عادل المشهور، مارست مهنة القانون لمدة تتجاوز ال35 عا منذ عام 1983م. 
+                    فقد عملت في 3 جهات حكومية بالإضافة إلى ممارسة العمل القانوني كمهنة حرة.
+                    واستطعت بخبرتي الطويلة ملاحظة عطش الكثيرون وخاصةً الموظفين فقد عملت في 3 جهات حكومية </p>
+              </div>
+    
+           
+  </div>
+</div>
+
+
+<div class="articles" id="articles">
+<h2 class="main-title">المقــالات الأكثر شيوعــًا</h2>
+<div class="container">
+
+<div class="box">
+  <div class="content">
+    <h3>مقال 1</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a  href="#">إقرأ المزيد</a>
+    <i onclick="location.href='article.html'"class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box">
+  <div class="content">
+    <h3>مقال 2</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i onclick="location.href='article.html'"class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box">
+  <div class="content">
+    <h3>مقال 3</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i onclick="location.href='article.html'"class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box">
+  <div class="content">
+    <h3>مقال 4</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i onclick="location.href='article.html'"class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+<div class="box" id="box1">
+  <div class="content">
+    <h3>مقال 5</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i onclick="location.href='article.html'"class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box" id="box2">
+  <div class="content">
+    <h3>مقال 6</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i onclick="location.href='article.html'"class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box" id="box3">
+  <div class="content">
+    <h3>مقال 7</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i onclick="location.href='article.html'"class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+</div>
+<button>تابع المزيد من المقالات</button>
+
+</div>
+
+
+
+<div class="articles" id="new">
+<h2 class="main-title">أحدث المقــالات</h2>
+<div class="container">
+<div class="box">
+  <div class="content">
+    <h3>مقال 1</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box">
+  <div class="content">
+    <h3>مقال 2</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box">
+  <div class="content">
+    <h3>مقال 3</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+
+<div class="box">
+  <div class="content">
+    <h3>مقال 4</h3>
+    <p>      في قانون العرب خصوصية زوارنا لها أهمية بالغة بالنسبة لنا
+    </p>
+  </div>
+  <div class="info">
+    <a href="#">إقرأ المزيد</a>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  </div>
+</div>
+ 
+</div>
+</div>
+
+
+
+<!-- Start Contact -->
+<div id="cont" class="contact">
+  <div class="container2">
+    <h2 class="special-heading">لــديك استفســار؟..</h2>
+    <div class="info">
+      <p class="label">لا تتردد في التواصل معنا عبر:</p>
+      <a class="link"> law4arabs@gmail.com</a>
+      <div class="social">
+        تواصل معنا عبر فيسبوك : 
+       <a href="https://www.facebook.com/law4arabs/"><i class="fab fa-facebook-f"></i></a> 
+      
+      </div>
+      <h3 style="position: relative;text-align: center;color: white;">اتــرك لنا رسالتك</h3>
+
+      <div class="container">
+        <form action="/action_page.php">
+          <input type="text" id="fname" name="firstname" placeholder="الاسم الأول..">
+          <input type="text" id="lname" name="lastname" placeholder="اسم العائلة..">
+      
+         
+        <select id="country" name="country">
+            <option value="egypt">مصر</option>
+            <option value="sudia">السعودية</option>
+            <option value="kweit">الكويت</option>
+          </select>
+                <textarea id="subject" name="subject" placeholder="اكتب رسالتك.." style="height:200px"></textarea>
+    
+          <input type="submit" value="إرسال">
+        </form>
+      </div>
+      
+  
+    </div>
+  </div>
+</div>
+<!-- End Contact -->
+
+<!-- Start Footer -->
+<div class="footer">&copy; 2021 <span style="font-size: 20px;">AML</span> All Right Reserved</div>
+<!-- End Footer -->
+<a id="button"></a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+function readMore() {
+    let readLess = document.getElementById("readLess");
+    let readMore = document.getElementById("readMore");
+    let moreBtn = document.getElementById("morebtn");
+
+    if (readLess.style.display === "none") {
+        readLess.style.display = "inline";
+        moreBtn.innerHTML = "اكمل القراءة";
+        readMore.style.display = "none";
+    } else {
+        readLess.style.display = "none";
+        moreBtn.innerHTML = "اقرأ أقل";
+        readMore.style.display = "inline";
+    }
+}
+ 
+// Smooth Scroll To Div 
+    
+    $('#navbar a ').click(function () {
+       
+        $('html, body').animate({
+            
+            scrollTop: $('#' + $(this).data('value')).offset().top
+            
+        }, 1000);
+        
+        console.log('#' + $(this).data('value'));
+        
+    });
+
+  
+
+    $('#mySidenav a ').click(function () {
+       
+       $('html, body').animate({
+           
+           scrollTop: $('#' + $(this).data('value')).offset().top
+           
+       }, 1000);
+       
+       console.log('#' + $(this).data('value'));
+       
+   });
+
+//scroll to top button
+
+var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+//read more button
+          $(document).ready(function(){
+            $("button").click(function(){
+              $("#box1").fadeIn();
+              $("#box2").fadeIn("slow");
+              $("#box3").fadeIn(3000);
+            });
+          });
+
+ 
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
+   /* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+
+          </script>
+</body>
+</html>
